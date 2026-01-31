@@ -1,3 +1,11 @@
+package tests;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +19,8 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
+@Epic("Homework 3")
+@Feature("Alerts")
 public class AlertTests {
 
     WebDriver driver;
@@ -24,6 +34,9 @@ public class AlertTests {
     }
 
     @Test
+    @Story("Prompt alert with textbox")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Send Bakari Akhvlediani to alert textbox and verify result text")
     void alertWithTextboxTest() {
 
         driver.get("https://demo.automationtesting.in/Alerts.html");

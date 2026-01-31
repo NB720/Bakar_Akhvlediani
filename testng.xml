@@ -3,8 +3,8 @@
 
     <test name="Parallel Tests">
         <classes>
-            <class name="FormTests"/>
-            <class name="AlertTests"/>
+            <class name="tests.FormTests"/>
+            <class name="tests.AlertTests"/>
         </classes>
     </test>
 

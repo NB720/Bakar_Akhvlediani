@@ -1,3 +1,11 @@
+package tests;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +20,8 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
+@Epic("Homework 3")
+@Feature("Automation Practice Form")
 public class FormTests {
 
     WebDriver driver;
@@ -25,6 +35,9 @@ public class FormTests {
     }
 
     @Test
+    @Story("Submit form and verify popup data")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Fill the form with Bakari Akhvlediani data and verify submission popup")
     void submitFormTest() {
 
         driver.get("https://demoqa.com/automation-practice-form");
@@ -61,4 +74,3 @@ public class FormTests {
         driver.quit();
     }
 }
-
